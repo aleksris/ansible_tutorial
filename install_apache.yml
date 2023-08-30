@@ -5,6 +5,11 @@
   tasks:
 
   - name: install apache server
-    yum:
-      name: httpd       
+    yum:  
+      name: httpd
+      state: latest       
 
+  - name: add php support for apache
+    yum:
+      name: php
+      state: latest
