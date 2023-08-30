@@ -4,12 +4,10 @@
   become: true
   tasks:
 
-  - name: install apache server
-    yum:  
-      name: httpd
-      state: latest       
-
-  - name: add php support for apache
-    yum:
-      name: php
+  - name: install apache server and php support
+    package:  
+      name: 
+         - httpd
+         - php
       state: latest
+      update_cache: true
